@@ -19,6 +19,8 @@ namespace WPFHelloWorld
         public MainWindow()
         {
             InitializeComponent();
+            myButton.FontSize = 50;
+            myButton.Content = "Hello Kerim";
         }
     }
 }
