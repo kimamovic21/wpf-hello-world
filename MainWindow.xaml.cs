@@ -16,11 +16,22 @@ namespace WPFHelloWorld
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
-        {
-            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
+            //myTextBlock.Text = "Hello from the cs side!";
+            //myTextBlock.Foreground = Brushes.Blue;
+
+            TextBlock myTb = new TextBlock();
+            myTb.Text = "Hello from the cs side!";
+            myTb.Inlines.Add(" this is added using inlines");
+            myTb.Inlines.Add(new Run(" Run text that i added in Code behind")
+            {
+                Foreground = Brushes.Red,
+                TextDecorations = TextDecorations.Underline,
+            });
+
+            myTb.TextWrapping = TextWrapping.Wrap;
+            myTb.Foreground = Brushes.Blue;
+            this.Content = myTb;
         }
     }
 }

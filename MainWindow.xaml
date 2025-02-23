@@ -8,18 +8,10 @@
         Title="Hello World Window" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <TextBlock>
+            <TextBlock x:Name="myTextBlock">
                 <Bold>Hello</Bold> 
                 <Italic> World!</Italic>
                 <LineBreak/>
-                Go to 
-                <Hyperlink NavigateUri="https://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
-                    google.com
-                </Hyperlink>
-            </TextBlock>
-            <TextBlock TextWrapping="WrapWithOverflow" Foreground="Black">
-                <Span Foreground="Red">Lorem ipsum dolor sit amet,</Span> 
-                consectetur adipiscing elit. Vestibulum sed placerat risus, a euismod magna. Nam sed lorem egestas, luctus sem at, fringilla ex. Vivamus condimentum velit vel dui consectetur aliquam. Aliquam a velit orci. Nam convallis convallis rhoncus. Nulla facilisi. Duis at lobortis sem. Phasellus aliquam aliquam sem nec posuere. Nulla rhoncus elit vel rutrum aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mollis ex sed est egestas mattis. Donec mi turpis, auctor non ullamcorper in, molestie eu massa. Praesent hendrerit tellus id sem pretium tincidunt. Integer convallis vulputate turpis non tempus. Nullam quis tellus massa.
             </TextBlock>
         </StackPanel>
     </Grid>
