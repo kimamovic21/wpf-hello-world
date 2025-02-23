@@ -6,60 +6,15 @@
         xmlns:local="clr-namespace:WPFHelloWorld"
         mc:Ignorable="d"
         Title="Hello World Window" Height="450" Width="800">
-    <StackPanel>
-        <Label FontWeight="Bold">Topings: </Label>
-        
-        <CheckBox 
-            x:Name="cbParent" 
-            IsThreeState="True"
-            Checked="cbParentCheckedChanged"
-            Unchecked="cbParentCheckedChanged"
+    <StackPanel Margin="10">
+        <Label FontSize="25">Name: </Label>
+        <TextBox FontSize="25"></TextBox>
+        <Label FontSize="25">Password: </Label>
+        <PasswordBox 
+            FontSize="25" 
+            PasswordChar="*" 
+            MaxLength="15"
         >
-            Select All
-        </CheckBox>
-        
-        <CheckBox 
-            Margin="15, 5"
-            x:Name="cbCheese"
-            VerticalContentAlignment="Center"
-            Checked="cbTopingsCheckedChanged"
-            Unchecked="cbTopingsCheckedChanged"
-        >
-            <WrapPanel>
-                <Image 
-                    Width="50"
-                    Height="50"
-                    Source="https://fhafnb.com/wp-content/uploads/2023/09/types-of-cheese-and-uses-1.jpg">
-                </Image>
-                <Label Name="lbCheese">Extra Cheese</Label>
-            </WrapPanel>
-        </CheckBox>
-        
-        <CheckBox 
-            Margin="15, 5" 
-            Name="cbTuna"
-            Checked="cbTopingsCheckedChanged"
-            Unchecked="cbTopingsCheckedChanged"    
-        >
-            Tuna
-        </CheckBox>
-
-        <CheckBox 
-            Margin="15, 5" 
-            Name="cbOlives"
-            Checked="cbTopingsCheckedChanged"
-            Unchecked="cbTopingsCheckedChanged"
-        >
-            Olives
-        </CheckBox>
-
-        <CheckBox 
-            Margin="15, 5" 
-            Name="cbPepperoni"
-            Checked="cbTopingsCheckedChanged"
-            Unchecked="cbTopingsCheckedChanged"
-        >
-            Pepperoni
-        </CheckBox>
+        </PasswordBox>
     </StackPanel>
 </Window>
