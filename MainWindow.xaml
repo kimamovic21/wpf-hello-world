@@ -7,45 +7,59 @@
         mc:Ignorable="d"
         Title="Hello World Window" Height="450" Width="800">
     <StackPanel>
-        <Label FontWeight="Bold">Who do you vote for ?</Label>
+        <Label FontWeight="Bold">Topings: </Label>
         
-        <RadioButton 
-            x:Name="radioButtonRed" 
-            GroupName="Colors" 
-            FontSize="15" 
-            VerticalContentAlignment="Center" 
-            IsChecked="True"
+        <CheckBox 
+            x:Name="cbParent" 
+            IsThreeState="True"
+            Checked="cbParentCheckedChanged"
+            Unchecked="cbParentCheckedChanged"
+        >
+            Select All
+        </CheckBox>
+        
+        <CheckBox 
+            Margin="15, 5"
+            x:Name="cbCheese"
+            VerticalContentAlignment="Center"
+            Checked="cbTopingsCheckedChanged"
+            Unchecked="cbTopingsCheckedChanged"
         >
             <WrapPanel>
                 <Image 
-                    Source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Red_Color.jpg/1536px-Red_Color.jpg" 
-                    Width="30" 
-                    Height="30"
-                />
-                <Label Name="labelRed">Red</Label>
+                    Width="50"
+                    Height="50"
+                    Source="https://fhafnb.com/wp-content/uploads/2023/09/types-of-cheese-and-uses-1.jpg">
+                </Image>
+                <Label Name="lbCheese">Extra Cheese</Label>
             </WrapPanel>
-        </RadioButton>
+        </CheckBox>
         
-        <RadioButton GroupName="Colors" FontSize="20" VerticalContentAlignment="Center">
-            <WrapPanel>
-                <Image 
-                    Source="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-blue-solid-color-background.jpg" 
-                    Width="30" 
-                    Height="30"
-                />
-                <Label>Blue</Label>
-            </WrapPanel>
-        </RadioButton>
-        
-        <RadioButton GroupName="Colors">Green</RadioButton>
-        
-        <RadioButton GroupName="Colors">Yellow</RadioButton>
+        <CheckBox 
+            Margin="15, 5" 
+            Name="cbTuna"
+            Checked="cbTopingsCheckedChanged"
+            Unchecked="cbTopingsCheckedChanged"    
+        >
+            Tuna
+        </CheckBox>
 
-        
-        <Label FontWeight="Bold">How do you feel about it ?</Label>
-        
-        <RadioButton GroupName="Feeling">Good</RadioButton>
-        <RadioButton GroupName="Feeling">Ok</RadioButton>
-        <RadioButton GroupName="Feeling">Not happy</RadioButton>
+        <CheckBox 
+            Margin="15, 5" 
+            Name="cbOlives"
+            Checked="cbTopingsCheckedChanged"
+            Unchecked="cbTopingsCheckedChanged"
+        >
+            Olives
+        </CheckBox>
+
+        <CheckBox 
+            Margin="15, 5" 
+            Name="cbPepperoni"
+            Checked="cbTopingsCheckedChanged"
+            Unchecked="cbTopingsCheckedChanged"
+        >
+            Pepperoni
+        </CheckBox>
     </StackPanel>
 </Window>
