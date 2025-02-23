@@ -5,14 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFHelloWorld"
         mc:Ignorable="d"
-        Title="Hello World Window" Height="900" Width="900">
-    <StackPanel Margin="10">
-        <Image 
-            x:Name="myImage"
-            Width="800" 
-            Height="500" 
-            Source="https://t4.ftcdn.net/jpg/02/01/78/01/360_F_201780104_hetXS26W8alnsbDKbpnr4sVizJfiO12w.jpg"
-            MouseUp="Image_MouseUp"
-        />
+        Title="Hello World Window" Height="200" Width="400">
+    <StackPanel Margin="10" VerticalAlignment="Center">
+        <Slider
+            x:Name="mySlider"
+            Maximum="100" 
+            Minimum="0"
+            TickPlacement="BottomRight"
+            TickFrequency="10"
+            IsSnapToTickEnabled="True"
+            Value="20"
+            ValueChanged="mySlider_ValueChanged"
+        >
+        </Slider>
+        <TextBlock 
+            x:Name="myTextBlock"
+            FontSize="{
+                Binding ElementName=mySlider, 
+                Path=Value,
+                UpdateSourceTrigger=PropertyChanged
+            }"
+        >
+            Hello World!
+        </TextBlock>
     </StackPanel>
 </Window>

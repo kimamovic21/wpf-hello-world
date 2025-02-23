@@ -18,11 +18,13 @@ namespace WPFHelloWorld
             InitializeComponent();
         }
 
-
-        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        private void mySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            myImage.Source = new BitmapImage(
-                new Uri(@"https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg", UriKind.Absolute));
+            if (myTextBlock != null && mySlider.Value > 0d)
+            {
+                myTextBlock.Text = "Slider value is :" + mySlider.Value.ToString();
+                myTextBlock.FontSize = mySlider.Value;
+            }
         }
     }
 }
