@@ -16,30 +16,7 @@ namespace WPFHelloWorld
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //myLabel.Foreground = Brushes.Coral;
-
-            double myFontSize = myLabel.FontSize;
-            myLabel.FontSize = myFontSize + 1;
-        }
-
-        private void myButton_MouseDoubleClick(object sender, RoutedEventArgs e)
-        {
-            double myFontSize = myLabel.FontSize;
-            myLabel.FontSize = myFontSize - 2;
-        }
-
-        private void myButton_MouseEnter(object sender, MouseEventArgs e)
-        {
-            myLabel.Foreground = Brushes.Blue;
-        }
-
-        private void myButton_MouseLeave(object sender, MouseEventArgs e)
-        {
-            myLabel.Foreground = Brushes.Black;
+            radioButtonRed.IsChecked = true;
         }
     }
 }

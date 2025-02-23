@@ -7,22 +7,45 @@
         mc:Ignorable="d"
         Title="Hello World Window" Height="450" Width="800">
     <StackPanel>
-        <Button 
-            Background="Coral"
-            Foreground="Wheat"
-            ToolTip="I am your best button"
-            MouseEnter="myButton_MouseEnter"
-            MouseLeave="myButton_MouseLeave"
-            x:Name="myButton" 
-            MouseDoubleClick="myButton_MouseDoubleClick" 
-            Width="100" 
-            Height="30" 
-            Click="Button_Click"
+        <Label FontWeight="Bold">Who do you vote for ?</Label>
+        
+        <RadioButton 
+            x:Name="radioButtonRed" 
+            GroupName="Colors" 
+            FontSize="15" 
+            VerticalContentAlignment="Center" 
+            IsChecked="True"
         >
-            Click Me
-        </Button>
-        <Label FontSize="16" Foreground="Black" Name="myLabel">
-            Hello World
-        </Label>
+            <WrapPanel>
+                <Image 
+                    Source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Red_Color.jpg/1536px-Red_Color.jpg" 
+                    Width="30" 
+                    Height="30"
+                />
+                <Label Name="labelRed">Red</Label>
+            </WrapPanel>
+        </RadioButton>
+        
+        <RadioButton GroupName="Colors" FontSize="20" VerticalContentAlignment="Center">
+            <WrapPanel>
+                <Image 
+                    Source="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-blue-solid-color-background.jpg" 
+                    Width="30" 
+                    Height="30"
+                />
+                <Label>Blue</Label>
+            </WrapPanel>
+        </RadioButton>
+        
+        <RadioButton GroupName="Colors">Green</RadioButton>
+        
+        <RadioButton GroupName="Colors">Yellow</RadioButton>
+
+        
+        <Label FontWeight="Bold">How do you feel about it ?</Label>
+        
+        <RadioButton GroupName="Feeling">Good</RadioButton>
+        <RadioButton GroupName="Feeling">Ok</RadioButton>
+        <RadioButton GroupName="Feeling">Not happy</RadioButton>
     </StackPanel>
 </Window>
