@@ -5,16 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFHelloWorld"
         mc:Ignorable="d"
-        Title="Hello World Window" Height="450" Width="800">
+        Title="Hello World Window" Height="900" Width="900">
     <StackPanel Margin="10">
-        <Label FontSize="25">Name: </Label>
-        <TextBox FontSize="25"></TextBox>
-        <Label FontSize="25">Password: </Label>
-        <PasswordBox 
-            FontSize="25" 
-            PasswordChar="*" 
-            MaxLength="15"
-        >
-        </PasswordBox>
+        <Image 
+            x:Name="myImage"
+            Width="800" 
+            Height="500" 
+            Source="https://t4.ftcdn.net/jpg/02/01/78/01/360_F_201780104_hetXS26W8alnsbDKbpnr4sVizJfiO12w.jpg"
+            MouseUp="Image_MouseUp"
+        />
     </StackPanel>
 </Window>
