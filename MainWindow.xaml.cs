@@ -11,16 +11,16 @@ using System.Windows.Shapes;
 
 namespace WPFHelloWorld
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            myButton.FontSize = 50;
-            myButton.Content = "Hello Kerim";
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
         }
     }
 }
