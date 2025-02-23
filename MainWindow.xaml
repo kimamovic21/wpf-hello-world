@@ -7,17 +7,22 @@
         mc:Ignorable="d"
         Title="Hello World Window" Height="450" Width="800">
     <StackPanel>
-        <TextBox 
-            FontSize="30" 
-            Margin="50" 
-            AcceptsReturn="True"
-            TextWrapping="Wrap"
-            SpellCheck.IsEnabled="True"
-            Language="en-US"
-            Background="Aqua"
-            Foreground="Brown"
-            Text="Hello World!"
-            IsReadOnly="False"
-        />
+        <Button 
+            Background="Coral"
+            Foreground="Wheat"
+            ToolTip="I am your best button"
+            MouseEnter="myButton_MouseEnter"
+            MouseLeave="myButton_MouseLeave"
+            x:Name="myButton" 
+            MouseDoubleClick="myButton_MouseDoubleClick" 
+            Width="100" 
+            Height="30" 
+            Click="Button_Click"
+        >
+            Click Me
+        </Button>
+        <Label FontSize="16" Foreground="Black" Name="myLabel">
+            Hello World
+        </Label>
     </StackPanel>
 </Window>
