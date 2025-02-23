@@ -7,12 +7,20 @@
         mc:Ignorable="d"
         Title="Hello World Window" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <TextBlock x:Name="myTextBlock">
-                <Bold>Hello</Bold> 
-                <Italic> World!</Italic>
-                <LineBreak/>
-            </TextBlock>
-        </StackPanel>
+        <Label 
+            Margin="16, 16, 16, 0" 
+            BorderThickness="1" 
+            BorderBrush="Black"
+        >
+            <StackPanel Orientation="Horizontal">
+                <Image 
+                    Width="100" 
+                    Height="50"
+                    Source="https://thumbs.dreamstime.com/b/mail-symbol-icon-blue-gradient-rounded-corners-isolated-vector-illustration-mail-symbol-icon-blue-gradient-rounded-138998808.jpg" 
+                />
+                <AccessText FontSize="32" Text="Message">
+                </AccessText>
+            </StackPanel>
+        </Label>
     </Grid>
 </Window>
