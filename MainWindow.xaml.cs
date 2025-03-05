@@ -16,15 +16,13 @@ namespace WPFHelloWorld
         public MainWindow()
         {
             InitializeComponent();
+            myTextBlock.Text = myCalendar.SelectedDate.ToString();
         }
 
-        private void mySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void myCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (myTextBlock != null && mySlider.Value > 0d)
-            {
-                myTextBlock.Text = "Slider value is :" + mySlider.Value.ToString();
-                myTextBlock.FontSize = mySlider.Value;
-            }
+            if (myTextBlock != null)
+                myTextBlock.Text = myCalendar.SelectedDate.ToString();
         }
     }
 }
