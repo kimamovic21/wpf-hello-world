@@ -5,19 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFHelloWorld"
         mc:Ignorable="d"
-        Title="Hello World Window" Height="400" Width="300">
+        Title="Hello World Window" Height="400" Width="500">
     <StackPanel>
-        <Viewbox Stretch="Fill">
-            <Calendar 
-                x:Name="myCalendar"
-                DisplayMode="Month"
-                SelectedDatesChanged="myCalendar_SelectedDatesChanged"
-            >
-                <Calendar.BlackoutDates>
-                    <CalendarDateRange Start="03/01/2025" End="03/05/2025"/>
-                </Calendar.BlackoutDates>
-            </Calendar>
-        </Viewbox>
-        <TextBlock x:Name="myTextBlock"></TextBlock>
+        <DatePicker
+            SelectedDate="03/05/2025"   
+            SelectedDateFormat="Long"
+            SelectedDateChanged="DatePicker_SelectedDateChange"
+        >
+            <DatePicker.BlackoutDates>
+                <CalendarDateRange Start="03/01/2025" End="03/04/2025">
+                    
+                </CalendarDateRange>
+            </DatePicker.BlackoutDates>
+        </DatePicker>
     </StackPanel>
 </Window>

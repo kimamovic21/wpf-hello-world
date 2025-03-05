@@ -16,13 +16,15 @@ namespace WPFHelloWorld
         public MainWindow()
         {
             InitializeComponent();
-            myTextBlock.Text = myCalendar.SelectedDate.ToString();
         }
 
-        private void myCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        private void DatePicker_SelectedDateChange(object sender, SelectionChangedEventArgs e)
         {
-            if (myTextBlock != null)
-                myTextBlock.Text = myCalendar.SelectedDate.ToString();
+            if((sender as DatePicker).SelectedDate != null)
+            {
+                string myDate = (sender as DatePicker).SelectedDate.ToString();
+                MessageBox.Show("Date has been changed to " + myDate);
+            }
         }
     }
 }
