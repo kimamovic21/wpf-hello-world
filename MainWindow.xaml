@@ -5,18 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFHelloWorld"
         mc:Ignorable="d"
-        Title="Hello World Window" Height="400" Width="500">
+        Title="Hello World Window" Height="400" Width="800">
     <StackPanel>
-        <DatePicker
-            SelectedDate="03/05/2025"   
-            SelectedDateFormat="Long"
-            SelectedDateChanged="DatePicker_SelectedDateChange"
-        >
-            <DatePicker.BlackoutDates>
-                <CalendarDateRange Start="03/01/2025" End="03/04/2025">
-                    
-                </CalendarDateRange>
-            </DatePicker.BlackoutDates>
-        </DatePicker>
+        <Expander Expanded="Expander_Expanded">
+            <Expander.Header>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center">
+                        Click to expand and click again to hide the content
+                    </TextBlock>
+                </StackPanel>
+            </Expander.Header>
+            <StackPanel>
+                <Button>Click Me</Button>
+                <DatePicker></DatePicker>
+                <TextBlock 
+                    TextWrapping="Wrap"
+                    FontSize="20"
+                >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Vestibulum molestie erat nec rhoncus posuere. 
+                    Donec a fermentum lacus. Nunc luctus tempor neque, et 
+                    laoreet est vestibulum eu. Donec in orci eget erat maximus 
+                    lobortis. Fusce tempus, nisi vel scelerisque auctor, sapien
+                    erat luctus tortor, vel auctor arcu lacus quis quam. Duis 
+                    eget placerat mi. Cras eros tortor, faucibus sit amet tempus
+                    ut, ultrices eu nisi. Aliquam et venenatis sem. Curabitur 
+                    consectetur malesuada eros, ut mollis ipsum auctor vel. 
+                    Etiam sollicitudin mi ac lacinia molestie. Quisque nec 
+                    molestie mauris.
+                </TextBlock>
+            </StackPanel>
+        </Expander>
     </StackPanel>
 </Window>
